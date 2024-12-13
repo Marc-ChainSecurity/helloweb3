@@ -42,6 +42,7 @@ def deploy(
         ],
         env={
             "MNEMONIC": mnemonic,
+            "PLAYER_ADDR": get_player_account(mnemonic).address,
             "OUTPUT_FILE": f"/proc/self/fd/{wfd}",
         }
         | os.environ,
